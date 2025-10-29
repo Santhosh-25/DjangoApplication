@@ -21,7 +21,7 @@ jobs:
       - ls
       - pwd
       - cd mysite
-      - python3 -m pip install django -t .
+      - python3.9 -m pip install django -t .
   CLIInstallation:
     runner: Machine
     image: node
