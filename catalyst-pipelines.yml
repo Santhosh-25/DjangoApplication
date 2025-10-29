@@ -33,5 +33,5 @@ jobs:
 stages:
   - name: Deployment
     jobs:
-      - CLIInstallation
       - Deployment
+      - CLIInstallation
