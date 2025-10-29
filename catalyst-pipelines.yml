@@ -4,7 +4,7 @@ runners:
     config-id: 2
 images:
   image:
-    image: node:20
+    image: python:3.9-slim
     auth:
        username: santhosh270
        password: Catalyst@test123
