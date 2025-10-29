@@ -1,0 +1,30 @@
+version: 1
+runners:
+  Machine:
+    config-id: 2
+images:
+  image:
+    image: node:20
+    auth:
+       username: santhosh270
+       password: Catalyst@test123
+jobs:
+  Deployment:
+    runner: Machine
+    image: image
+    steps:
+      - ls
+      - pwd
+      - npm i -g zcatalyst-cli@latest
+      - catalyst --version
+    #   - cd functions/pipeline_function
+    #   - npm install --platform=linux --arch=x64 #I have mentioned package name in the package.json file
+    #   - cd ../..
+      - cd mysite
+      - python3 -m pip install django -t .
+      - catalyst deploy --project 27833000000008058 --org 862569740 --only appsail --token m_1004.af2a065472259ebceabb987ff97f77f7.5da80c8b3eecc12b25b41b95c3d9d5ef
+
+stages:
+  - name: Deployment
+    jobs:
+      - Deployment
