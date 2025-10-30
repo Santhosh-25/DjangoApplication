@@ -2,7 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-sys.path.insert(0, '../lib')
+# sys.path.insert(0, '../lib')
 
 def main():
     """Run administrative tasks."""
